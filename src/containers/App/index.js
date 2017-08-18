@@ -21,6 +21,7 @@ class App extends Component {
   }
 
   addItem() {
+    throw "Error"
     ReactDOM.unstable_deferredUpdates(() => {
       this.setState(state => ({
         items: state.items.map(item => Object.assign({}, item, { name: `item:${item.value + 1}`, value: item.value + 1 })),
